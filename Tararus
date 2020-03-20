@@ -1,0 +1,12 @@
+    sudo apt-get update
+    echo 'deb http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
+    echo 'deb-src http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list
+    sudo apt-get install curl
+    curl https://www.dotdeb.org/dotdeb.gpg | sudo apt-key add -
+    sudo apt-get update
+    sudo apt-get install -y exuberant-ctags cmake libevent-dev libncurses5-dev lib32gcc1 php7.0 php7.0-gd
+    wget https://github.com/tmux/tmux/releases/download/2.0/tmux-2.0.tar.gz
+    tar xvf tmux-2.0.tar.gz
+    cd tmux-2.0
+    ./configure && make
+    sudo make install
